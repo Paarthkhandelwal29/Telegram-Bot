@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false, // Set to true if you want to enforce explicit typing
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true, // This is important for interop with CommonJS modules
+    "allowJs": true, // Allows JavaScript files to be mixed with TypeScript
+    "typeRoots": ["./node_modules/@types", "./src/@types"] ,// Add your own type roots if needed
+    "paths": {
+      "@nestjs/*": ["./node_modules/@nestjs/*"],
+      "telegraf": ["./node_modules/telegraf"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"],
+}
